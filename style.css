@@ -49,3 +49,18 @@ animate {
     animation-name: animate-fade;
     animation-fill-mode: backwards;
   }
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+img.open_icon{
+    width: 20px;
+    height: 20px;
+}
+
+img.close_icon{
+    width: 20px;
+    height: 20px;
+}
