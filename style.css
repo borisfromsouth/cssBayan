@@ -1,5 +1,21 @@
+@font-face {
+    font-family: "Trueno";
+    src: url("/fonts/TruenoExtraBold.otf") format("truetype");
+    font-weight: 400;
+  }
+
+  @keyframes animate-fade {
+    0% { height: 10; }
+    100% { opacity: 100; }
+  }
+
 .header {
 	top:20px;
+}
+
+body{
+    box-sizing: border-box;
+    padding: 10px 450px;
 }
 
 .main {
@@ -9,3 +25,27 @@
 html * {
 	position:relative;
 }
+
+h1{
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    font-family: 'Trueno', sans-serif;
+    font-size: 30px;
+    padding: 0;
+}
+
+.block{
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    font-family: 'Trueno', sans-serif;
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+animate {
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-fill-mode: backwards;
+  }
