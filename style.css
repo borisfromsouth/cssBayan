@@ -21,6 +21,10 @@ html * {
 	position:relative;
 }
 
+input{
+    display: none;
+}
+
 h1{
     display: flex;
     justify-content: left;
@@ -31,9 +35,13 @@ h1{
 }
 
 img{
-    visibility: hidden;/**/
-    width: 100px;
-    height: 100px;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 0px;
+    height: 0px;
+    transition: 0.15s ease-in-out;
 }
 
 .block{
@@ -79,6 +87,12 @@ img{
     height: 10px;
 }
 
-.window:hover img.icon{
-    /*visibility: visible;*/
+.window:hover img#open{
+    visibility: visible;
+}
+
+input[type="checkbox"]:checked + .content img{
+    visibility: visible;
+    width: 200px;
+    height: 200px;
 }
