@@ -4,11 +4,6 @@
     font-weight: 400;
   }
 
-  @keyframes animate-fade {
-    0% { height: 10; }
-    100% { opacity: 100; }
-  }
-
 .header {
 	top:20px;
 }
@@ -35,6 +30,12 @@ h1{
     padding: 0;
 }
 
+img{
+    visibility: hidden;/**/
+    width: 100px;
+    height: 100px;
+}
+
 .block{
     display: flex;
     justify-content: left;
@@ -45,34 +46,39 @@ h1{
     padding: 5px 0;
 }
 
+.block:hover #close{
+    display: none;
+}
+
+.block:hover #open{
+    visibility: visible;
+}
+
 .block:hover{
     color:black;
 }
 
-.block:hover img{
-    visibility:visible;
+.content{
+    height: 100%;
+    /*width: 90%;*/
 }
 
-animate {
-    animation-duration: 0.5s;
-    animation-name: animate-fade;
-    animation-fill-mode: backwards;
-  }
-
-img {
-    visibility: hidden;
-    width: 100px;
-    height: 100px;
+.img-div{
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: right;
 }
 
-img.open_icon{
-    visibility: hidden;
+.icon{
     width: 20px;
     height: 20px;
 }
 
-img.close_icon{
-    visibility: hidden;
-    width: 20px;
-    height: 20px;
+.meme{
+    width: 10px;
+    height: 10px;
+}
+
+.window:hover img.icon{
+    /*visibility: visible;*/
 }
