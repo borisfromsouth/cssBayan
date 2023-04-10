@@ -40,8 +40,17 @@ h1{
     justify-content: left;
     align-content: center;
     font-family: 'Trueno', sans-serif;
+    color:dodgerblue;
     font-size: 16px;
     padding: 5px 0;
+}
+
+.block:hover{
+    color:black;
+}
+
+.block:hover img{
+    visibility:visible;
 }
 
 animate {
@@ -51,16 +60,19 @@ animate {
   }
 
 img {
+    visibility: hidden;
     width: 100px;
     height: 100px;
 }
 
 img.open_icon{
+    visibility: hidden;
     width: 20px;
     height: 20px;
 }
 
 img.close_icon{
+    visibility: hidden;
     width: 20px;
     height: 20px;
 }
