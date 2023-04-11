@@ -13,10 +13,6 @@ body{
     padding: 30px 500px 0px 500px;
 }
 
-.window{
-    /*border: 1px solid black;*/
-}
-
 .main {
 	padding-top:100px;
 }
@@ -66,9 +62,16 @@ img{
 
 .content{
     height: 100%;
-    width: 95%;
-    position: relative;
+    width: 100%;
     padding: 10px 0px;
+}
+
+.content label img{
+    width: 20px;
+    height: 20px;
+    display: inline;
+    justify-content: right;
+    float: right;
 }
 
 .meme{
@@ -91,16 +94,15 @@ img{
 
 .window:hover img#open{
     visibility: visible;
-    float: right;
 }
 
-input[type="checkbox"]:checked + .content img{
+input[type="checkbox"]:checked + .content .meme img{
     visibility: visible;
     width: 400px;
     height: 400px;
 }
 
-input[type="checkbox"]:checked ~ .img-div #open{
+input[type="checkbox"]:checked ~ .content label #open{  
     transform: rotate(45deg) scale(0.8);
 }
 
