@@ -10,7 +10,11 @@
 
 body{
     box-sizing: border-box;
-    padding: 10px 450px;
+    padding: 50px 500px 0px 500px;
+}
+
+.window{
+    /*border: 1px solid black;*/
 }
 
 .main {
@@ -19,6 +23,7 @@ body{
 
 html * {
 	position:relative;
+    background-color: rgba(246,246,236,255);
 }
 
 input{
@@ -36,10 +41,7 @@ h1{
 
 img{
     visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 0px;
+    width: 400px;
     height: 0px;
     transition: 0.15s ease-in-out;
 }
@@ -52,10 +54,7 @@ img{
     color:dodgerblue;
     font-size: 16px;
     padding: 5px 0;
-}
-
-.block:hover #close{
-    display: none;
+    min-height: 40px;
 }
 
 .block:hover #open{
@@ -68,11 +67,20 @@ img{
 
 .content{
     height: 100%;
-    /*width: 90%;*/
+    width: 95%;
+    position: relative;
+    padding: 10px 0px;
+}
+
+.meme{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-div{
-    flex: 1 1 auto;
+    width: 5%;
     display: flex;
     justify-content: right;
 }
@@ -82,13 +90,9 @@ img{
     height: 20px;
 }
 
-.meme{
-    width: 10px;
-    height: 10px;
-}
-
 .window:hover img#open{
     visibility: visible;
+    float: right;
 }
 
 input[type="checkbox"]:checked + .content img{
@@ -97,10 +101,6 @@ input[type="checkbox"]:checked + .content img{
     height: 400px;
 }
 
-input[type="checkbox"]:checked + .img-div #close{
-    /*visibility: visible;
-    width: 400px;
-    height: 400px;*/
-    background-color: red;
+input[type="checkbox"]:checked ~ .img-div #open{
+    transform: rotate(45deg) scale(0.8);
 }
-
