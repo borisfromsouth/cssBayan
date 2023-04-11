@@ -36,9 +36,9 @@ h1{
 
 img{
     visibility: hidden;
-    width: 400px;
+    max-width: 400px; 
     height: 0px;
-    transition: 0.15s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 .block{
@@ -50,10 +50,6 @@ img{
     font-size: 22px;
     padding: 5px 0;
     min-height: 40px;
-}
-
-.block:hover #open{
-    visibility: visible;
 }
 
 .block:hover{
@@ -79,6 +75,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .img-div{
@@ -96,18 +93,32 @@ img{
     visibility: visible;
 }
 
-input[type="checkbox"]:checked + .content .meme img{
+input:checked + .content .meme img{
     visibility: visible;
-    width: 400px;
+    width: auto;
+    height: auto;
+    max-width: 1000px;
     height: 400px;
+    margin: 20px 0px;
 }
 
-input[type="checkbox"]:checked ~ .content label #open{  
+.block:hover > .content .meme img{
+    visibility: visible;
+    width: auto;
+    height: auto;
+    max-width: 1000px;
+    height: 400px;
+    margin: 20px 0px;
+}
+
+input:checked ~ .content label #open{  
     transform: rotate(45deg) scale(0.8);
 }
 
 @media (hover: hover){ 
-
+    label, .window{
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 320px){
